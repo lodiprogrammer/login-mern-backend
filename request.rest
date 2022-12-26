@@ -1,0 +1,54 @@
+//crate user
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name" : "tata",
+    "email" : "tata@gmail.com",
+    "password" : "6969",
+    "confPassword" : "6969",
+    "role" : "User"
+}
+
+###
+//get all user
+GET http://localhost:5000/users
+
+###
+//get single user
+GET http://localhost:5000/users/106af1cf-1775-4ab0-9f31-e3f7be91c232
+
+###
+PATCH  http://localhost:5000/users/a15fd423-ac01-4eb9-b2e2-aa46814342be
+Content-Type: application/json
+
+{
+    "name" : "tata",
+    "email" : "tata@gmail.com",
+    "password" : "666",
+    "confPassword" : "666",
+    "role" : "user"
+}
+
+###
+//Delete user
+DELETE  http://localhost:5000/users/12d643ac-7af3-4bd0-ad4f-cdf181d3a9ec
+
+###
+// LOGIN
+POST   http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email" : "regie@gmail.com",
+    "password" : "1003"
+}
+
+###
+// cek login
+GET    http://localhost:5000/me
+
+###
+// cek loggout
+DELETE  http://localhost:5000/logout
+
